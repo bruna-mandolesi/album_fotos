@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Passion+One&family=Sriracha&display=swap');
+
+body {
+    background-color: black;
+}
+
+.galeria {
+    margin: 0.5em;
+    columns: 300px;
+    column-gap: 0.5em;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 0.5em;
+    border-radius: 2%;
+}
+
+.galeria:hover {
+    animation: pulso 1s infinite; /* tempo e suavidade da animação */
+}
+
+.img-move {
+  transition: transform 1s ease; /* tempo e suavidade da animação */
+}
+
+.img-move:hover {
+  transform: scale(80%); /* aumenta 10% ao passar o mouse */
+}
+
