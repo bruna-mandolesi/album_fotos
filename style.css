@@ -1,21 +1,21 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Passion+One&family=Sriracha&display=swap');
-
 body {
     background-color: black;
 }
 
 .galeria {
     margin: 0.5em;
-    columns: 300px;
+    column-width: 200px;
     column-gap: 0.5em;
 }
 
 img {
     width: 100%;
+    height: auto;
     margin-bottom: 0.5em;
     border-radius: 2%;
+    break-inside: avoid;
 }
 
 .galeria:hover {
@@ -30,3 +30,15 @@ img {
   transform: scale(80%); /* aumenta 10% ao passar o mouse */
 }
 
+/* --- Responsividade extra --- */
+@media (max-width: 600px) {
+    .galeria {
+        column-width: 120px; /* imagens menores em telas muito pequenas */
+    }
+}
+
+@media (min-width: 1400px) {
+    .galeria {
+        column-width: 200px; /* imagens maiores em telas grandes */
+    }
+}
